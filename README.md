@@ -2,6 +2,7 @@
 Site web pour RM
 # Tools 
 - symfony 2 
-- gulpjs ou gruntjs
+- gulpjs
+- bower
 - capistrano
 - sass/compass
