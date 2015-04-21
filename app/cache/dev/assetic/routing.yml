@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'C:\projet.dev\roDesign\sf\app/config/routing_dev.yml'
+    resource: /var/www/roDesign/app/config/routing_dev.yml
