@@ -23,13 +23,17 @@ gulp.task('js', [ 'minJs'],function(){
 });
 
 		gulp.task('concatJs', function(){
-			return gulp.src(js_path+'**/*.js')
-				.pipe(gConcat('min.js'))
+			return gulp.src([
+					js_path+'lib/jquery.js',
+					js_path+'lib/bootstrap.min.js',
+					js_path+'*.js'
+				])
+				.pipe(gConcat('main.js'))
 				.pipe(gulp.dest(js_path));
 				
 		});
 		gulp.task('minJs', ['concatJs'], function(){
-			return gulp.src(js_path+'min.js')
+			return gulp.src(js_path+'main.js')
 				.pipe(jsFilter)
 				.pipe(uglify())
 				.pipe(jsFilter.restore())
@@ -55,14 +59,17 @@ gulp.task('css', ['minifyCss'], function(){
 			});
 
 			gulp.task('concatCss', ['compass'], function(){
-				return gulp.src(css_path+'**/*.css')
-					.pipe(gConcat('min.css'))
+				return gulp.src([
+						css_path+'font-awesome.min.css',
+						css_path+'master.css'
+					])
+					.pipe(gConcat('main.css'))
 					.pipe(gulp.dest(css_path));
 					
 			});
 
 			gulp.task('minifyCss', ['concatCss'],  function(){
-				return gulp.src(css_path+'min.css')
+				return gulp.src(css_path+'main.css')
 					.pipe(cssFilter)
 					.pipe(minifyCss())
 					.pipe(cssFilter.restore())

@@ -127,9 +127,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // test
-        if (preg_match('#^/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'test')), array (  '_controller' => 'Ro\\Bundle\\SiteBundle\\Controller\\DefaultController::indexAction',));
+        // index
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'index');
+            }
+
+            return array (  '_controller' => 'Ro\\Bundle\\SiteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
         }
 
         // homepage

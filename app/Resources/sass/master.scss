@@ -1,4 +1,5 @@
 @import 'compass';
 
-@import '_test.scss';
-@import '_test2.scss';
+@import '_variable.scss';
+@import '../libs/bootstrap/_bootstrap.scss';
+@import '_evento_theme.scss';

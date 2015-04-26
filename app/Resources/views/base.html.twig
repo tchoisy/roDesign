@@ -1,13 +1,104 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ro design</title>
+    <link href="{{asset('css/main.css')}}" rel="stylesheet">
+    <!-- <link href="css/animate.css" rel="stylesheet">  -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->  
+    <script type="text/javascript" src="{{asset('css/main.js')}}"></script>
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+    {% include '::header.html.twig' %}
+    {% include '::slide_home.html.twig' %}
+    
+
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+
+   
+    <section id="contact">
+        <div id="map">
+            <div id="gmap-wrap">
+                <div id="gmap">                 
+                </div>              
+            </div>
+        </div><!--/#map-->
+        <div class="contact-section">
+            <div class="ear-piece">
+                <img class="img-responsive" src="images/ear-piece.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-sm-offset-4">
+                        <div class="contact-text">
+                            <h3>Contact</h3>
+                            <address>
+                                E-mail: rodesign@r15mamery<br>
+                                Tél: +(33) 4 04157895<br>
+                            </address>
+                        </div>
+                        <div class="contact-address">
+                            <h3>Contact</h3>
+                            <address>
+                                Quelque part<br>
+                                dans une ville<br>
+                                En France
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div id="contact-section">
+                            <h3>Envoyer un message</h3>
+                            <div class="status alert alert-success" style="display: none"></div>
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" required="required" placeholder="Nom">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" required="required" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Entrez votre message"></textarea>
+                                </div>                        
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary pull-right">Envoyer</button>
+                                </div>
+                            </form>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!--/#contact-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p> Copyright  &copy;2014<a target="_blank" href="http://tommy-choisy.fr"> Tommy CHOISY </a>. All Rights Reserved. 
+                    <br> Designed by <a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme &amp; Tommy CHOISY</p>                
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+  
+    
+</body>
 </html>

@@ -7,18 +7,36 @@ class __TwigTemplate_c965f18429c2ccd9108549cdb8c1cbbcc31d1e3b5c5d57f185d7709a9e5
     {
         parent::__construct($env);
 
-        $this->parent = false;
+        // line 1
+        try {
+            $this->parent = $this->env->loadTemplate("::base.html.twig");
+        } catch (Twig_Error_Loader $e) {
+            $e->setTemplateFile($this->getTemplateName());
+            $e->setTemplateLine(1);
+
+            throw $e;
+        }
 
         $this->blocks = array(
+            'body' => array($this, 'block_body'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "::base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "Hello ";
-        echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")), "html", null, true);
-        echo "!
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 2
+    public function block_body($context, array $blocks = array())
+    {
+        // line 3
+        echo "
 ";
     }
 
@@ -34,6 +52,6 @@ class __TwigTemplate_c965f18429c2ccd9108549cdb8c1cbbcc31d1e3b5c5d57f185d7709a9e5
 
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  39 => 3,  36 => 2,  11 => 1,);
     }
 }
