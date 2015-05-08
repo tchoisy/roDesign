@@ -18,17 +18,22 @@ class __TwigTemplate_b2077e3fc2032492389645285323f56e0cd652a6e8b8c85a30458e14bce
         // line 1
         echo "<div class=\"row\">                   
     <div class=\"navbar-header\">
-        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
+        
+        <button type=\"button\" class=\"navbar-toggle menu-toggle\" data-toggle=\"collapse\" data-target=\".menu-collapse\">
             <span class=\"sr-only\">Toggle navigation</span>
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
         </button>
+        <button type=\"button\" class=\"navbar-toggle share-toggle\" data-toggle=\"collapse\" data-target=\".share-collapse\">
+            <span class=\"sr-only\">Toggle navigation</span>
+            <i class=\"fa fa-share-alt\"></i>
+        </button>
         <a class=\"navbar-brand\" href=\"index.html\">
             <img class=\"img-responsive\" src=\"img/logo_rodesign.png\" alt=\"logo\">
         </a>                    
     </div>
-    <div class=\"collapse navbar-collapse\">
+    <div class=\"collapse navbar-collapse menu-collapse\">
 
         <ul class=\"nav navbar-nav navbar-right\">             
             <li class=\"no-scroll active\"><a href=\"#home\">Home</a></li>

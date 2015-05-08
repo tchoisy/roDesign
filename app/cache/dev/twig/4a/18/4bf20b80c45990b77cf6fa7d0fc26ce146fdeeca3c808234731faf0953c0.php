@@ -70,12 +70,7 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
         echo "
    
     <section id=\"contact\">
-        <div id=\"map\">
-            <div id=\"gmap-wrap\">
-                <div id=\"gmap\">                 
-                </div>              
-            </div>
-        </div><!--/#map-->
+        
         <div class=\"contact-section\">
             <div class=\"ear-piece\">
                 <img class=\"img-responsive\" src=\"images/ear-piece.png\" alt=\"\">
@@ -128,13 +123,16 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
     <footer id=\"footer\">
         <div class=\"container\">
             <div class=\"text-center\">
-                <p> Copyright  &copy;2014<a target=\"_blank\" href=\"http://tommy-choisy.fr\"> Tommy CHOISY </a>. All Rights Reserved. 
+                <p> Copyright  &copy;2015<a target=\"_blank\" href=\"http://tommy-choisy.fr\"> Tommy CHOISY </a>. All Rights Reserved. 
                     <br> Designed by <a target=\"_blank\" href=\"http://shapebootstrap.net/\"> Evento </a>Theme &amp; Tommy CHOISY</p>                
             </div>
         </div>
     </footer>
     <!--/#footer-->
-  
+  <script src=\"";
+        // line 96
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/main.js"), "html", null, true);
+        echo "\"></script>
     
 </body>
 </html>";
@@ -162,6 +160,6 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 
     public function getDebugInfo()
     {
-        return array (  149 => 33,  144 => 32,  70 => 34,  67 => 33,  65 => 32,  61 => 30,  58 => 29,  56 => 28,  43 => 18,  32 => 10,  21 => 1,);
+        return array (  147 => 33,  142 => 32,  134 => 96,  70 => 34,  67 => 33,  65 => 32,  61 => 30,  58 => 29,  56 => 28,  43 => 18,  32 => 10,  21 => 1,);
     }
 }

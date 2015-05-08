@@ -17,10 +17,7 @@ class __TwigTemplate_4ace4ac5db485d017977018f2d22ec4ec1d69a8e79d1e1164bc1f6eac08
     {
         // line 1
         echo "<div class=\"header-top\">
-\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".share-collapse\">
-        <span class=\"sr-only\">Toggle navigation</span>
-        <i class=\"fa fa-share-alt\"></i>
-    </button>
+\t
     <div class=\"collaspe share-collapse navbar-collapse\">
 \t    <div class=\"pull-right social-icons\">
 \t        <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>

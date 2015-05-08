@@ -25,8 +25,8 @@ gulp.task('js', [ 'minJs'],function(){
 		gulp.task('concatJs', function(){
 			return gulp.src([
 					js_path+'lib/jquery.js',
-					js_path+'lib/bootstrap.min.js',
-					js_path+'*.js'
+					js_path+'lib/bootstrap.min.js'
+					//js_path+'*.js'
 				])
 				.pipe(gConcat('main.js'))
 				.pipe(gulp.dest(js_path));
@@ -60,7 +60,6 @@ gulp.task('css', ['minifyCss'], function(){
 
 			gulp.task('concatCss', ['compass'], function(){
 				return gulp.src([
-						css_path+'font-awesome.min.css',
 						css_path+'master.css'
 					])
 					.pipe(gConcat('main.css'))
@@ -84,7 +83,8 @@ gulp.task('default',['css', 'js'], function(){
 });
 
 
-gulp.task('watch', function(){
+var stream  = gulp.task('watch', function(){
 	gulp.watch(js_path+'**/*.js', ['js']);
 	gulp.watch(scss_path+'**/*.scss', ['css']);
 });
+stream.on('error', function() {});

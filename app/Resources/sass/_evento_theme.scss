@@ -657,12 +657,13 @@ h2 {
 **************************/
 
 .contact-section {
-  background-color: #f7ab24;
+  background-color: $bleu-theme;
   background-image: url("../images/contact-bg.jpg");
   background-position:60% 0;
   background-size:contain;
   background-repeat:no-repeat;  
   position: relative;
+  color: white;
 }
 
 .ear-piece {
@@ -677,7 +678,7 @@ h2 {
 
 #contact h3 {
   text-transform:inherit;
-  color: #373737; 
+  color: white; 
 }
 
 #contact-section h3 {  
@@ -686,7 +687,7 @@ h2 {
 
 #contact address {
   font-size: 18px;  
-  color: #373737; 
+  color: white; 
 }
 
 .contact-text {
@@ -700,7 +701,7 @@ h2 {
   box-shadow:none;
   outline: 0 none;
   border-radius: 0;
-  color: #797979;
+  color: white;
   font-size: 18px;
 }
 
@@ -718,8 +719,8 @@ h2 {
 }
 
 #contact-section .btn-primary {
-  background-color: #373737;
-  color: #f7ab24;
+  background-color: #AEAEAE;
+  color: white;
   border: none;
   font-size: 24px;
   padding: 6px 42px;
@@ -740,7 +741,6 @@ h2 {
 
 #footer {
   background-color: #212121;
-  background-image: url("../images/footer-bg.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -750,11 +750,11 @@ h2 {
 }
 
 #footer a {
-  color:#f7ab24
+  color: $bleu-theme
 }
 
 #footer a:hover {
-  color:#1B7B98
+  color:#AEAEAE
 }
 
 

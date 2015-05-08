@@ -25,7 +25,7 @@ class __TwigTemplate_e97943c9d2ed8f8673789a67d60b65e223f58b87c36b60bf43762595542
                 <img class=\"img-responsive\" src=\"img/slider/sf.jpg\" alt=\"slider\">                       
                 <div class=\"carousel-caption\">
                     <h2>Bienvenue </h2>
-                    <h4>Decouvrez mes maillots</h4>
+                    <h4>Decouvrez mes maillots et tout mon univers fhfuidhsfshdfh fhsdiuf hdsiuf hiusdgf iusd ghfyusdg figsi</h4>
                     <a href=\"#contact\">Contactez-moi <i class=\"fa fa-angle-right\"></i></a>
                 </div>
             </div>             
