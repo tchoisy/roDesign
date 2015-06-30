@@ -10153,7 +10153,7 @@ h2 {
   box-shadow: none;
   outline: 0 none;
   border-radius: 0;
-  color: white;
+  color: gray;
   font-size: 18px;
 }
 
@@ -10204,12 +10204,6 @@ h2 {
 
 #footer a:hover {
   color: #AEAEAE;
-}
-
-.share-collapse.in {
-  -webkit-transition: all 6s ease-in-out;
-  -o-transition: all 6s ease-in-out;
-  transition: all 6s ease-in-out;
 }
 
 /* lg */
@@ -10356,10 +10350,19 @@ h2 {
   }
 
   .share-collapse {
-    display: none;
+    display: block;
     background: black;
     opacity: 0.9;
     padding: 20px;
+    margin-right: -200px;
+    -webkit-transition: margin-right 0.3s ease-in-out;
+    -o-transition: margin-right 0.3s ease-in-out;
+    transition: margin-right 0.3s ease-in-out;
+  }
+
+  .share-collapse.in {
+    /* @include transition(margin-right  0.3s ease-in-out);*/
+    margin-right: 0px;
   }
 
   /*.navbar-brand {

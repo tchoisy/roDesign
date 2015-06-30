@@ -38,10 +38,6 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
         <script src=\"js/html5shiv.js\"></script>
         <script src=\"js/respond.min.js\"></script>
     <![endif]-->  
-    <script type=\"text/javascript\" src=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/main.js"), "html", null, true);
-        echo "\"></script>
 
     <link rel=\"shortcut icon\" href=\"images/ico/favicon.ico\">
     <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"images/ico/apple-touch-icon-144-precomposed.png\">
@@ -52,21 +48,21 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 
 <body>
     ";
-        // line 28
+        // line 27
         $this->env->loadTemplate("::header.html.twig")->display($context);
-        // line 29
+        // line 28
         echo "    ";
         $this->env->loadTemplate("::slide_home.html.twig")->display($context);
-        // line 30
+        // line 29
         echo "    
 
     ";
-        // line 32
+        // line 31
         $this->displayBlock('body', $context, $blocks);
-        // line 33
+        // line 32
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 34
+        // line 33
         echo "
    
     <section id=\"contact\">
@@ -81,7 +77,7 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
                         <div class=\"contact-text\">
                             <h3>Contact</h3>
                             <address>
-                                E-mail: rodesign@r15mamery<br>
+                                E-mail: rodesign@r15mamery.fr<br>
                                 Tél: +(33) 4 04157895<br>
                             </address>
                         </div>
@@ -130,7 +126,7 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
     </footer>
     <!--/#footer-->
   <script src=\"";
-        // line 96
+        // line 95
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
     
@@ -138,12 +134,12 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 </html>";
     }
 
-    // line 32
+    // line 31
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 33
+    // line 32
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -160,6 +156,6 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 
     public function getDebugInfo()
     {
-        return array (  147 => 33,  142 => 32,  134 => 96,  70 => 34,  67 => 33,  65 => 32,  61 => 30,  58 => 29,  56 => 28,  43 => 18,  32 => 10,  21 => 1,);
+        return array (  143 => 32,  138 => 31,  130 => 95,  66 => 33,  63 => 32,  61 => 31,  57 => 29,  54 => 28,  52 => 27,  32 => 10,  21 => 1,);
     }
 }
