@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block slider %}
+    <div class="item active">
+        <img class="img-responsive" src="{{asset('img/slider/maillot.jpg')}}" alt="slider">
+        {#<section class="map_carte" id="map_carte" style="height : 190px;"></section>    #}                   
+    </div>     
+{% endblock %}
+{% block body %}
+<section class="map_carte" id="map_carte" style="height : 350px;"></section>
+<section class="about" style="background : rgb(25,125,120)">
+	
+</section>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var lat = 48.8430294; 
+    var long = 2.2533622;
+    window.onload = initialiser();
+    function initialiser() {
+
+
+        var latlng = new google.maps.LatLng(lat,long);
+        //objet contenant des propri?s avec des identificateurs pr?finis dans Google Maps permettant
+        //de d?nir des options d'affichage de notre carte
+        var options = {
+            center: latlng,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+
+            //constructeur de la carte qui prend en param?e le conteneur HTML
+            //dans lequel la carte doit s'afficher et les options
+        var carte = new google.maps.Map(document.getElementById("map_carte"), options);
+    	carte.setTilt(45);
+        var mark = new google.maps.Marker({
+                position: new google.maps.LatLng(lat,long), 
+                //position:(marqueurs[i].latitude, marqueurs[i].longitude),
+                map: carte,
+                title: ":)"
+        });	
+        google.maps.event.addDomListener(window, 'load', initialiser);
+
+    }
+</script>
+{% endblock %} 

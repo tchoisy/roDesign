@@ -128,7 +128,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // admin-index
-        if (rtrim($pathinfo, '/') === '/admin-design') {
+        if (rtrim($pathinfo, '/') === '/admin-rodesign') {
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'admin-index');
             }
@@ -143,6 +143,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             return array (  '_controller' => 'Ro\\Bundle\\SiteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'index',);
+        }
+
+        // about
+        if ($pathinfo === '/a-propos') {
+            return array (  '_controller' => 'Ro\\Bundle\\SiteBundle\\Controller\\DefaultController::aboutAction',  '_route' => 'about',);
+        }
+
+        // contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Ro\\Bundle\\SiteBundle\\Controller\\DefaultController::contactAction',  '_route' => 'contact',);
         }
 
         // homepage

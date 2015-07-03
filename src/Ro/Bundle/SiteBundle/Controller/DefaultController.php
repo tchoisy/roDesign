@@ -16,4 +16,24 @@ class DefaultController extends Controller
     {
         return $this->render('RoSiteBundle:Default:index.html.twig', array());
     }
+
+    /**
+	 *  @Route("/a-propos", name ="about" )
+	 * @param  [type]
+	 * @return [type]
+	 */
+    public function aboutAction()
+    {
+        return $this->render('RoSiteBundle:Default:about.html.twig', array());
+    }
+
+    /**
+	 *  @Route("/contact", name ="contact" )
+	 * @param  [type]
+	 * @return [type]
+	 */
+    public function contactAction()
+    {
+        return $this->render('RoSiteBundle:Default:contact.html.twig', array());
+    }
 }

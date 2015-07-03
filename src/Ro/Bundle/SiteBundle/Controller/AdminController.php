@@ -7,7 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 
 /**
- *  @Route("/admin-design" )
+ *  @Route("/admin-rodesign" )
  * @param  [type]
  * @return [type]
  */

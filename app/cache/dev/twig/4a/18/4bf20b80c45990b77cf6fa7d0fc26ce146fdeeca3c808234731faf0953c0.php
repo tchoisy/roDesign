@@ -10,6 +10,7 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
         $this->parent = false;
 
         $this->blocks = array(
+            'slider' => array($this, 'block_slider'),
             'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -51,25 +52,38 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
         // line 27
         $this->env->loadTemplate("::header.html.twig")->display($context);
         // line 28
-        echo "    ";
-        $this->env->loadTemplate("::slide_home.html.twig")->display($context);
-        // line 29
-        echo "    
+        echo "    <section id=\"home\"> 
+        <div id=\"main-slider\" class=\"carousel slide\" data-ride=\"carousel\">
+            ";
+        // line 35
+        echo "            <div class=\"carousel-inner\">
+                ";
+        // line 36
+        $this->displayBlock('slider', $context, $blocks);
+        // line 38
+        echo "      
+            </div>
+        </div>      
+    </section>
+    
 
     ";
-        // line 31
+        // line 44
         $this->displayBlock('body', $context, $blocks);
-        // line 32
+        // line 45
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 33
+        // line 46
         echo "
    
     <section id=\"contact\">
         
         <div class=\"contact-section\">
             <div class=\"ear-piece\">
-                <img class=\"img-responsive\" src=\"images/ear-piece.png\" alt=\"\">
+                <img class=\"img-responsive\" src=\"";
+        // line 52
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/ear-piece.png"), "html", null, true);
+        echo "\" alt=\"\">
             </div>
             <div class=\"container\">
                 <div class=\"row\">
@@ -126,7 +140,7 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
     </footer>
     <!--/#footer-->
   <script src=\"";
-        // line 95
+        // line 108
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
     
@@ -134,12 +148,20 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 </html>";
     }
 
-    // line 31
+    // line 36
+    public function block_slider($context, array $blocks = array())
+    {
+        // line 37
+        echo "        
+                ";
+    }
+
+    // line 44
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 32
+    // line 45
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -156,6 +178,6 @@ class __TwigTemplate_4a184bf20b80c45990b77cf6fa7d0fc26ce146fdeeca3c808234731faf0
 
     public function getDebugInfo()
     {
-        return array (  143 => 32,  138 => 31,  130 => 95,  66 => 33,  63 => 32,  61 => 31,  57 => 29,  54 => 28,  52 => 27,  32 => 10,  21 => 1,);
+        return array (  165 => 45,  160 => 44,  155 => 37,  152 => 36,  144 => 108,  85 => 52,  77 => 46,  74 => 45,  72 => 44,  64 => 38,  62 => 36,  59 => 35,  55 => 28,  53 => 27,  33 => 10,  22 => 1,);
     }
 }

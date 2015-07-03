@@ -30,16 +30,28 @@ class __TwigTemplate_b2077e3fc2032492389645285323f56e0cd652a6e8b8c85a30458e14bce
             <i class=\"fa fa-share-alt\"></i>
         </button>
         <a class=\"navbar-brand\" href=\"index.html\">
-            <img class=\"img-responsive\" src=\"img/logo_rodesign.png\" alt=\"logo\">
+            <img class=\"img-responsive\" src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/logo_rodesign.png"), "html", null, true);
+        echo "\" alt=\"logo\">
         </a>                    
     </div>
     <div class=\"collapse navbar-collapse menu-collapse\">
 
         <ul class=\"nav navbar-nav navbar-right\">             
-            <li class=\"no-scroll active\"><a href=\"#home\">Home</a></li>
-            <li class=\"no-scroll\"><a href=\"#about\">About</a></li>                     
+            <li class=\"no-scroll active\"><a href=\"";
+        // line 21
+        echo $this->env->getExtension('routing')->getPath("index");
+        echo "\">Home</a></li>
+            <li class=\"no-scroll\"><a href=\"";
+        // line 22
+        echo $this->env->getExtension('routing')->getPath("about");
+        echo "\">About</a></li>                     
             <li class=\"no-scroll\"><a href=\"#about\">Portfolio</a></li>                     
-            <li class=\"no-scroll\"><a href=\"#contact\">Contact</a></li>       
+            <li class=\"no-scroll\"><a href=\"";
+        // line 24
+        echo $this->env->getExtension('routing')->getPath("contact");
+        echo "\">Contact</a></li>       
         </ul>
     </div>
 </div>";
@@ -50,8 +62,13 @@ class __TwigTemplate_b2077e3fc2032492389645285323f56e0cd652a6e8b8c85a30458e14bce
         return "::nav.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  53 => 24,  48 => 22,  44 => 21,  35 => 15,  19 => 1,);
     }
 }

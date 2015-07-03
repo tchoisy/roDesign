@@ -12,16 +12,16 @@
             <i class="fa fa-share-alt"></i>
         </button>
         <a class="navbar-brand" href="index.html">
-            <img class="img-responsive" src="img/logo_rodesign.png" alt="logo">
+            <img class="img-responsive" src="{{asset('img/logo_rodesign.png')}}" alt="logo">
         </a>                    
     </div>
     <div class="collapse navbar-collapse menu-collapse">
 
         <ul class="nav navbar-nav navbar-right">             
-            <li class="no-scroll active"><a href="#home">Home</a></li>
-            <li class="no-scroll"><a href="#about">About</a></li>                     
+            <li class="no-scroll active"><a href="{{ path('index') }}">Home</a></li>
+            <li class="no-scroll"><a href="{{ path('about') }}">About</a></li>                     
             <li class="no-scroll"><a href="#about">Portfolio</a></li>                     
-            <li class="no-scroll"><a href="#contact">Contact</a></li>       
+            <li class="no-scroll"><a href="{{ path('contact') }}">Contact</a></li>       
         </ul>
     </div>
 </div>
